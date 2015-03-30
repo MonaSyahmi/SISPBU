@@ -1,0 +1,76 @@
+.dropdown {float:left; padding:0px; z-index:10; position:relative; margin:0 auto; font-weight:bold;}
+.dropdown dt {width:107px; padding:5px 8px; font-weight:normal; cursor:pointer; text-align:center; font-size:14px; z-index:-10;}
+.dropdown dt:hover {background-color:#000000; color:#FFFFFF; filter: alpha(opacity=50);  -moz-opacity: 0.50;  opacity: 0.50;}
+.dropdown dd {position:absolute; width:120px; display:none; background:#333333; z-index:-10; opacity:0; padding:0; margin:0; color:#CCC;}
+.dropdown ddd {position:absolute; overflow:hidden; width:120px; display:none; background:#333333; opacity:0; padding:0; bottom:46px;}
+.dropdown a, .dropdown a:active, .dropdown a:visited {display:block; padding:5px 8px; color:#333; border-bottom:1px solid #999999; text-decoration:none; background:#BAD1F5; width:107px; font-size:12px; color:#333; font-weight:bold;}
+.dropdown a:hover {text-decoration:underline; background-color:#09F; color:#FFF}
+.dropdown .underline {border-bottom:1px solid #b9d6dc}
+
+/* We remove the margin, padding, and list style of UL and LI components */
+#menuwrapper ul, #menuwrapper ul li{
+    margin:0;
+    padding:0;
+    list-style:none;	
+}
+
+/* We apply background color and border bottom white and width to 150px */
+#menuwrapper ul li{
+    background-color:#BAD1F5;
+    cursor:pointer;
+}
+
+/* We apply the background hover color when user hover the mouse over of the li component */
+#menuwrapper ul li:hover{
+    background-color:#09F;
+    position:relative;
+	color:#FFF;
+	text-decoration:underline;
+}
+
+/* We apply the link style */
+#menuwrapper ul li a{
+    padding:5px 8px;
+    color:#333;
+    display:inline-block;
+    text-decoration:none;
+}
+#menuwrapper ul li a:hover{
+    color:#FFF;
+    text-decoration:underline;
+}
+
+/**** SECOND LEVEL MENU ****/
+/* We make the position to absolute for flyout menu and hidden the ul until the user hover the parent li item */
+#menuwrapper ul li ul{
+    position:absolute;
+    display:none;
+	background-color:#BAD1F5; text-align:left;
+}
+
+/* When user has hovered the li item, we show the ul list by applying display:block, note: 150px is the individual menu width.  */
+
+#menuwrapper ul li:hover ul{
+    left:123px;	
+    top:0px;
+    display:block;
+}
+
+/* we apply different background color to 2nd level menu items*/
+#menuwrapper ul li ul li{
+    background-color:#BAD1F5;
+	color:#333;
+}
+
+/* We change the background color for the level 2 submenu when hovering the menu */
+
+#menuwrapper ul li:hover ul li:hover{
+    background-color:#09F;
+}
+
+/* We style the color of level 2 links */
+#menuwrapper ul li ul li a{
+    color:#333;
+    display:inline-block;
+}
+
